@@ -118,6 +118,7 @@ textarea {
     margin-block-start: 2rem;
     display: grid;
     gap: 2rem;
+    align-items: start;
 
     @media (width > 768px) {
         grid-template-columns: repeat(2, 1fr);
@@ -144,7 +145,7 @@ textarea {
         }
     }
 
-    ul.menu-items {
+    ul.menu-items[role="list"] {
         list-style: none;
         padding: 2rem 1rem;
         background-color: var(--beige-200);
