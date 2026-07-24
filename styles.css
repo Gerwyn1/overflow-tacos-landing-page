@@ -1,0 +1,235 @@
+:root {
+    --white: #fff;
+    --beige-100: #f9ead1;
+    --beige-200: #ebd9bb;
+
+    --brown-400: #9c5423;
+    --brown-500: #72513b;
+    --brown-900: #513827;
+
+    --green-500: #145e3a;
+
+    --yellow-500: #eca42d;
+
+    --red-400: #f2604d;
+    --red-500: #c74433;
+
+    /* @link https://utopia.fyi/type/calculator?c=320,13,1.333,1240,18,1.414,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+    --fs--2: clamp(0.4573rem, 0.4206rem + 0.1833vw, 0.5627rem);
+    --fs--1: clamp(0.6095rem, 0.5448rem + 0.3236vw, 0.7956rem);
+    --fs-0: clamp(0.8125rem, 0.7038rem + 0.5435vw, 1.125rem);
+    --fs-1: clamp(1.0831rem, 0.9065rem + 0.8829vw, 1.5908rem);
+    --fs-2: clamp(1.4437rem, 1.1635rem + 1.401vw, 2.2493rem);
+    --fs-3: clamp(1.9245rem, 1.4876rem + 2.1844vw, 3.1805rem);
+    --fs-4: clamp(2.5653rem, 1.8934rem + 3.3599vw, 4.4973rem);
+    --fs-5: clamp(3.4196rem, 2.3971rem + 5.1123vw, 6.3592rem);
+}
+
+/* font-family: "Open Sans", sans-serif;
+   font-family: Grandstander, cursive; */
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--fs-0);
+    line-height: 1.6;
+    color: var(--brown-900);
+    background-color: var(--beige-100);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+
+    font-family: Grandstander, cursive;
+    font-weight: 900;
+}
+
+.intro__content hgroup {
+    font-size: var(--fs-5);
+
+    h1 {
+        font-size: 1em;
+    }
+
+    h1+p {
+        font-family: Grandstander, cursive;
+        font-size: .5em;
+        line-height: 1.1;
+        color: var(--yellow-500);
+    }
+}
+
+
+
+h2 {
+    /* font-size:4rem; */
+
+    /* font-size: calc(var(--fs-4) - .5rem); */
+
+    font-size: var(--fs-4);
+    text-align: center;
+    margin-block-end: 2rem;
+}
+
+section {
+    /* padding-block: 6rem; */
+    /* padding-block: max(48px, 10vmin); */
+    padding-block: clamp(3rem, 10vw, 6rem);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+[role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.wrapper {
+
+    inline-size: min(775px, 100% - 2rem);
+    margin-inline: auto;
+    /* padding-inline:1rem; */
+}
+
+.wrapper[data-wrapper-size="wide"] {
+
+    inline-size: min(1300px, 100% - 2rem);
+    /* max-width: 1300px; */
+}
+
+.intro {
+    background-image: url("https://courses.thecascade.dev/module-2-assets/tacos.png");
+    background-size: cover;
+
+}
+
+.intro__content {
+    color: var(--white);
+    background: var(--green-500);
+    padding: 2rem;
+    border-radius: 1rem;
+
+    display: grid;
+    gap: 1rem;
+}
+
+.menu-categories {
+    display: grid;
+    align-items: start;
+    gap: 2rem;
+
+    @media (width > 900px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.menu {
+    background: var(--beige-200);
+    border-radius: 1rem;
+    overflow: hidden;
+
+    >header {
+        background: var(--green-500);
+        color: var(--white);
+        padding: 3rem 1.25rem;
+        text-align: center;
+
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    h3 {
+        font-size: var(--fs-3);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--yellow-500);
+    }
+}
+
+.menu-items {
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 1.5rem;
+    font-family: Grandstander, cursive;
+    color: var(--brown-400);
+    font-size: var(--fs-0);
+
+    h4,
+    span {
+        font-size: var(--fs-1);
+        /* font-size: 1.75rem; */
+
+        line-height: 1;
+        color: var(--green-500);
+        font-weight: 700;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.testimonial-grid {
+    display: grid;
+    gap: 2rem;
+
+    @media (width > 900px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.testimonial {
+    background: var(--beige-200);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+
+    h3 {
+        font-size: var(--fs-1);
+
+        /* font-size: var(--fs-2); */
+        /* font-size:1.5rem; */
+        font-weight: 700;
+        color: var(--green-500);
+    }
+
+    figure {
+        display: grid;
+        gap: 1rem;
+    }
+
+    figcaption {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 700;
+        color: var(--brown-500);
+    }
+}
+
+footer {
+    margin-block-start: 3rem;
+    background: var(--green-500);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    font-family: Grandstander, cursive;
+}
